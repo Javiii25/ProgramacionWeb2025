@@ -15,4 +15,7 @@ $numero = 10;
 $apellido = "Fernandez"; // no abrio la linea con un $ //
 $pais_de_origen = "Uruguay"; // no abrio la linea con un $, no separo el = y no cerro con un ;//
 $salario = 2000; // el $ que esta al lado del 2000 no iria //
+
+define(GRAVEDAD, 9.8); // ) //
+const GRAVEDAD = 9.8;                       ¨// ) ambos son constantes, las constantes son identificadores que representan un valor unico y no cambian durante la ejecucion del script, aunque las constantes parecen variables no lo son //
 ?>
