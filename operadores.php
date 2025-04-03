@@ -15,7 +15,7 @@ echo $edad;
 //el *= multiplica y asigna el valor de la derecha al valor de la variable, es decir, multiplica el 1 de edad por el 100
 
 $saludo .= '_nacho';
-echo $saludo;
+echo $saludo
 // el .= concatena el valor que tiene a la derecha al valor ya existente en saludo
 
 
