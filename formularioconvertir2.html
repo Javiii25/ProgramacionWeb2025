@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+</head>
+<body>
+    <h3>Conversor de pesos uruguayos a monedas extranjeras</h3>
+        <form action="convertir2.php" method="POST">
+        <label for="pesos">Ingrese una cantidad en pesos uruguayos: </label>
+        <input type="number" name="pesos" id="pesos" step="0.01" required/>
+        <br>
+        <label for="moneda">Ingrese una moneda a la que convertir: </label>
+        <select name="moneda" id="moneda" required>
+            <option value="Euros">Euros</option>
+            <option value="Dolares">Dolares</option>
+            <option value="Reales">Reales</option>
+        </select>    
+            <br>
+        <button type="submit" class="btn btn-dark">Convertir</button>
+</body>
+</html>
