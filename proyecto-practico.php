@@ -71,7 +71,16 @@ foreach ($inventario as $juego => $detalles) {
 }
 /*6)
  */
-foreach ($ as $key => $value) {
+var_dump($inventario);
+foreach ($inventario as $juego => &$detalles) {
+    if($detalles['Plataforma'] == "NES") {
+        $detalles['Precio'] = $detalles['Precio'] * 0.9;
+    }
+}
+var_dump($inventario);
+/*7)
+*/
+$busqueda = busqueda($inventario);
 
 
 
