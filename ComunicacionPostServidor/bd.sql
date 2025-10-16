@@ -8,5 +8,6 @@ CREATE TABLE proveedores (
     social INT(20) NOT NULL,
     email VARCHAR(150) NOT NULL UNIQUE,
     telefono INT(20) NOT NULL UNIQUE,
+    tipoProducto VARCHAR(150) NOT NULL,
     fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

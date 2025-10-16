@@ -1,4 +1,14 @@
-body { font-family: Arial; margin: 40px; }
+body { font-family: Arial; margin: 40px; background-color: bisque; 
+}
 form { max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 10px; }
 input, button { padding: 10px; font-size: 1em; }
 #mensaje { margin-top: 20px; font-weight: bold; }
+.recuadro{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
+.recuadro1 {
+    margin-bottom: 3rem;
+}

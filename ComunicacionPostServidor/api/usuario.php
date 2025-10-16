@@ -1,6 +1,6 @@
 <?php
 // Incluye el archivo de conexión a la base de datos
-require_once "Conexion.php";
+require_once "conexion.php";
 
 // Define la clase Usuario
 class Usuario {
@@ -14,9 +14,9 @@ class Usuario {
     }
 
     // Método para registrar un nuevo usuario
-    public function registrar($nombre, $email, $social, $numero, $TipoProducto   ) {
+    public function registrar($nombre, $email, $social, $telefono, $TipoProducto   ) {
         // Prepara una consulta para verificar si el email ya existe
-        $sql = "SELECT id FROM usuarios WHERE email = :email";
+        $sql = "SELECT id FROM proveedores WHERE email = :email";
         $stmt = $this->conexion->prepare($sql);
         // Asocia el parámetro :email con la variable $email
         $stmt->bindParam(":email", $email);
@@ -32,20 +32,20 @@ class Usuario {
         }
 
         // Prepara la consulta para insertar un nuevo usuario
-        $sql = "INSERT INTO usuarios (nombre, email, social, numero, TipoProducto) VALUES (:nombre, :email, :social, :numero, :TipoProducto)";
+        $sql = "INSERT INTO proveedores (nombre, email, social, telefono, TipoProducto) VALUES (:nombre, :email, :social, :telefono, :TipoProducto)";
         $stmt = $this->conexion->prepare($sql);
         // Asocia los parámetros con las variables correspondientes
         $stmt->bindParam(":nombre", $nombre);
         $stmt->bindParam(":email", $email);
         $stmt->bindParam(":social", $social);
-        $stmt->bindParam(":numero", $numero);
+        $stmt->bindParam(":telefono", $telefono);
         $stmt->bindParam(":TipoProducto", $TipoProducto);
 
         // Si la inserción es exitosa, retorna un mensaje de éxito y los datos del usuario
         if ($stmt->execute()) {
             return [
                 "estado" => "ok",
-                "mensaje" => "Usuario registrado correctamente.",
+                "mensaje" => "Proveedor registrado correctamente.",
                 "usuario" => [
                     "nombre" => $nombre,
                     "email" => $email

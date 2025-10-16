@@ -9,7 +9,7 @@ header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 
 // Incluye el archivo que contiene la clase Usuario
-require_once "Usuario.php";
+require_once "usuario.php";
 
 // Verifica que el método de la solicitud sea POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
